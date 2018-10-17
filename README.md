@@ -13,6 +13,7 @@
 - The game should announce the result of the game when it's over.
 
 ## Rules of Tic-Tac-Toe
+
 O X X
 X X O
 O X O
