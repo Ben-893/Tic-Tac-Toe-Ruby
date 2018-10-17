@@ -4,11 +4,13 @@ class TicTacToe
 
   attr_reader :board
 
-  def initialize()
+  def initialize
+  board=Board.new
   @board = board.grid
   @player = true
   end
 
-  def move(slot=0)
+  def move(slot)
     @board[slot] = @player
+  end
 end
