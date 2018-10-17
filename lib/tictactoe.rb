@@ -9,4 +9,6 @@ class TicTacToe
   @player = true
   end
 
+  def move(slot=0)
+    @board[slot] = @player
 end
