@@ -11,6 +11,7 @@ class TicTacToe
   end
 
   def move(slot)
+    raise 'Slot is in use' if @board[slot] != nil
     @board[slot] = @player
   end
 end

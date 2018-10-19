@@ -13,11 +13,11 @@
 - The game should announce the result of the game when it's over.
 
 ## Rules of Tic-Tac-Toe
-
+```
 O X X
 X X O
 O X O
-
+```
 - There are two players in the game (X and O).
 
 - The board is 9 positions in a 3x3 grid.
