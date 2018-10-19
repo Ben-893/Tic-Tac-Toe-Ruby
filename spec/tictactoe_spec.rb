@@ -12,4 +12,7 @@ describe TicTacToe do
       subject.move(0)
       expect{subject.move(0)}.to raise_error('Slot is in use')
     end
+    it 'should raise an error if a player tries to select a slot greater than 8' do
+      expect{subject.move(9)}.to raise_error('Invalid slot')
+    end
   end
