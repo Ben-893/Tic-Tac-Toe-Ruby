@@ -13,9 +13,11 @@ describe TicTacToe do
       expect{subject.move('0')}.to raise_error('Slot is in use')
     end
     it 'should raise an error if a player tries to select a slot greater than 9' do
-      expect{subject.move('9')}.to raise_error('Invalid Slot')
+      expect{subject.move('9')}.to raise_error('Invalid slot')
     end
     it 'should raise an error if the player tries to enter a character that is not an integer' do
       expect{subject.move('$')}.to raise_error('Not a valid number')
     end
   end
+
+  

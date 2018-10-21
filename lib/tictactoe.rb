@@ -14,7 +14,7 @@ class TicTacToe
   def move(slot)
     raise 'Not a valid number' unless slot =~ /^-?[0-9]+$/
     new_slot = slot.to_i
-    raise 'Invalid Slot' if new_slot > @board.size - 1
+    raise 'Invalid slot' if new_slot > @board.size - 1
     raise 'Slot is in use' if @board[new_slot] != nil
     @board[new_slot] = @player
   end
