@@ -3,9 +3,9 @@ require 'tictactoe.rb'
 describe TicTacToe do
 
   describe '#move' do
-    it 'should allow player 1 to occupy slot 0' do
+    it 'should allow player x to occupy slot 0' do
       subject.move('0')
-      expect(subject.board).to eq([true, nil, nil, nil, nil, nil, nil, nil, nil])
+      expect(subject.board).to eq(['x', nil, nil, nil, nil, nil, nil, nil, nil])
       end
     end
     it 'should raise an error if a player tries to use a slot thats already taken' do
@@ -17,6 +17,9 @@ describe TicTacToe do
     end
     it 'should raise an error if the player tries to enter a character that is not an integer' do
       expect{subject.move('$')}.to raise_error('Not a valid number')
+    end
+    it 'should start with player x as the current player' do
+      expect(subject.current_player.piece).to eq('x')
     end
   end
 
