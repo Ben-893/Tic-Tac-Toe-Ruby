@@ -21,4 +21,12 @@ class TicTacToe
     raise 'Slot is in use' if @board[new_slot] != nil
     @board[new_slot] = @current_player.piece
   end
+
+  def switch_player
+    if @current_player == @x
+      @current_player = @o
+    else
+      @current_player = @x
+    end
+  end
 end

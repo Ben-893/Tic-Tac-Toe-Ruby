@@ -21,6 +21,11 @@ describe TicTacToe do
     it 'should start with player x as the current player' do
       expect(subject.current_player.piece).to eq('x')
     end
-  end
-
   
+  describe '#switch_player' do
+    it 'should change the next players turn' do
+      subject.switch_player
+      expect(subject.current_player.piece).to eq('o')
+    end
+  end
+end  
