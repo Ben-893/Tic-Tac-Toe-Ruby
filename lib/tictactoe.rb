@@ -29,4 +29,13 @@ class TicTacToe
       @current_player = @x
     end
   end
+
+  def print_board
+    board.each_slice(3).to_a.each do |i|
+      puts i.to_s.tr(',', '|').tr('[', '|').tr(']', '|')
+    end
+  end
 end
+
+tictactoe = TicTacToe.new
+tictactoe.print_board
