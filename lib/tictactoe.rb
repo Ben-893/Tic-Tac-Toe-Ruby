@@ -14,6 +14,39 @@ class TicTacToe
     @current_player = @x
   end
 
+  def run
+    puts 'TicTacToe'
+    puts ''
+    while true 
+      print_board
+      input = gets.chomp
+      move(input)
+      if win?(@x)
+        print_board
+        puts 'X had won!'
+        break
+      end
+      if win?(@o)
+        print_board
+        puts 'O has won!'
+        break
+      end
+      if draw?
+        puts 'Neither player wins, its a draw!'
+        break
+      end
+      switch_player
+    end
+  end
+
+
+
+
+
+
+
+
+
   def move(slot)
     raise 'Not a valid number' unless slot =~ /^-?[0-9]+$/
     new_slot = slot.to_i
@@ -32,7 +65,7 @@ class TicTacToe
 
   def print_board
     board.each_slice(3).to_a.each do |i|
-      i.to_s.tr(',', '|').tr('[', '|').tr(']', '|').tr(' ', '|')
+     puts i.to_s.tr(',', '|').tr('[', '|').tr(']', '|').tr(' ', '|')
     end
   end
 
@@ -50,4 +83,4 @@ class TicTacToe
 end
 
 tictactoe = TicTacToe.new
-tictactoe.print_board
+tictactoe.run
