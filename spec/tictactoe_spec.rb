@@ -37,15 +37,33 @@ describe TicTacToe do
     end
   end
 
-  describe '#win' do
+  describe '#win?' do
     let(:x) { Player.new('x') }
     let(:o) { Player.new('o') }
-    it 'should check to see if a player has won' do
+    it 'should check the board to see if a player has won' do
       subject.move('0')
       subject.move('1')
       subject.move('2')
-      expect(subject.win(x)).to eq(true)
-      expect(subject.win(o)).to eq(false)
+      expect(subject.win?(x)).to eq(true)
+      expect(subject.win?(o)).to eq(false)
+    end
+  end
+
+  describe '#draw?' do
+    it 'should return true if there are not any slots free' do
+        subject.move('0')
+        subject.move('1')
+        subject.move('2')
+        subject.move('3')
+        subject.move('4')
+        subject.move('5')
+        subject.move('6')
+        subject.move('7')
+        subject.move('8')
+      expect(subject.draw?).to eq(true)
+    end
+    it 'should return false if there are any slots free' do
+      expect(subject.draw?).to eq(false)
     end
   end
 end

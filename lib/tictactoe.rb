@@ -36,12 +36,16 @@ class TicTacToe
     end
   end
 
-  def win(player)
+  def win?(player)
     WinConditions.any? do |array|
       array.all? do |slot|
         @board[slot] == player.piece
       end
     end
+  end
+
+  def draw?
+    !@board.include? nil
   end
 end
 
