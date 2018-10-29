@@ -32,7 +32,15 @@ class TicTacToe
 
   def print_board
     board.each_slice(3).to_a.each do |i|
-      puts i.to_s.tr(',', '|').tr('[', '|').tr(']', '|')
+      i.to_s.tr(',', '|').tr('[', '|').tr(']', '|').tr(' ', '|')
+    end
+  end
+
+  def win(player)
+    WinConditions.any? do |array|
+      array.all? do |slot|
+        @board[slot] == player.piece
+      end
     end
   end
 end

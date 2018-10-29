@@ -29,10 +29,23 @@ describe TicTacToe do
     end
   end
 
-    describe '#print_board' do
+  describe '#print_board' do
     it 'should display the board' do
+      subject.move('0')
       subject.print_board
-      expect(subject.print_board).to eq([[nil, nil, nil], [nil, nil, nil], [nil, nil, nil]])
+      expect(subject.print_board).to eq([['x', nil, nil], [nil, nil, nil], [nil, nil, nil]])
+    end
+  end
+
+  describe '#win' do
+    let(:x) { Player.new('x') }
+    let(:o) { Player.new('o') }
+    it 'should check to see if a player has won' do
+      subject.move('0')
+      subject.move('1')
+      subject.move('2')
+      expect(subject.win(x)).to eq(true)
+      expect(subject.win(o)).to eq(false)
     end
   end
 end
