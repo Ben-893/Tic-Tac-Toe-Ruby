@@ -39,14 +39,6 @@ class TicTacToe
     end
   end
 
-
-
-
-
-
-
-
-
   def move(slot)
     raise 'Not a valid number' unless slot =~ /^-?[0-9]+$/
     new_slot = slot.to_i
