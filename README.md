@@ -1,10 +1,11 @@
 # Tic-Tac-Toe tech test
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/test_coverage"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" /></a>
 
-##To Run
+<a href="https://codeclimate.com/github/Ben-893/tic-tac-toe/maintainability"><img src="https://api.codeclimate.com/v1/badges/e48960bcc81e41a6f756/maintainability" /></a>
+
+## To Run
 1. Open Command Line
 2. Require './lib/tictactoe.rb'
-3. Play
+3. Play (Player X goes first by default)
 
 ## Requirements
 

@@ -1,3 +1,5 @@
+require 'simplecov'
+SimpleCov.start
 require 'tictactoe.rb'
 
 describe TicTacToe do
