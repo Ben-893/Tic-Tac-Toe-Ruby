@@ -2,10 +2,19 @@
 
 <a href="https://codeclimate.com/github/Ben-893/tic-tac-toe/maintainability"><img src="https://api.codeclimate.com/v1/badges/e48960bcc81e41a6f756/maintainability" /></a>
 
-## To Run
-1. Open Command Line
-2. Require './lib/tictactoe.rb'
-3. Play (Player X goes first by default)
+## To setup
+```
+git clone https://github.com/Ben-893/tic-tac-toe.git && cd tic-tac-toe
+bundle
+```
+Uncomment the following line to the bottom of ``tictactoe.rb``
+```
+TicTacToe.new.run
+```
+## To run
+```
+ruby './libtictactoe.rb'
+```
 
 ## Requirements
 
