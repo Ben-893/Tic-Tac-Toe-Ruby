@@ -1,4 +1,4 @@
-# Tic-Tac-Toe tech test
+# Tic-Tac-Toe Tech Test
 
 <a href="https://codeclimate.com/github/Ben-893/tic-tac-toe/maintainability"><img src="https://api.codeclimate.com/v1/badges/e48960bcc81e41a6f756/maintainability" /></a>
 

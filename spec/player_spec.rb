@@ -1,5 +1,3 @@
-require 'simplecov'
-SimpleCov.start
 require 'player.rb'
 
 describe Player do

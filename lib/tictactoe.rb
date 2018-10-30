@@ -74,5 +74,5 @@ class TicTacToe
   end
 end
 
-tictactoe = TicTacToe.new
-tictactoe.run
+#tictactoe = TicTacToe.new
+#tictactoe.run

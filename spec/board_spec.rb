@@ -1,5 +1,3 @@
-require 'simplecov'
-SimpleCov.start
 require 'board.rb'
 
 describe Board do
