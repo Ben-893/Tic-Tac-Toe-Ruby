@@ -6,21 +6,27 @@ describe TicTacToe do
     it 'should allow player x to occupy slot 0' do
       subject.move('0')
       expect(subject.board).to eq(['x', nil, nil, nil, nil, nil, nil, nil, nil])
-      end
-    end
-    it 'should raise an error if a player tries to use a slot thats already taken' do
-      subject.move('0')
-      expect{subject.move('0')}.to raise_error('Slot is in use')
-    end
-    it 'should raise an error if a player tries to select a slot greater than 9' do
-      expect{subject.move('9')}.to raise_error('Invalid slot')
-    end
-    it 'should raise an error if the player tries to enter a character that is not an integer' do
-      expect{subject.move('$')}.to raise_error('Not a valid number')
     end
     it 'should start with player x as the current player' do
       expect(subject.current_player.piece).to eq('x')
     end
+  end
+  
+  describe '#slot_avalible?' do
+    it 'should return false if a player tries to use a slot thats already in use' do
+      subject.move('0')
+      expect(subject.slot_avalible?('0')).to eq false
+    end
+    it 'should return false if a player tries to select a slot greater than 9' do
+      expect(subject.slot_avalible?('9')).to eq false
+    end
+  end
+
+  describe '#valid_character?' do
+    it 'should return false if the player tries to enter a character that is not a number' do
+      expect(subject.valid_character?('$')).to eq nil
+    end
+  end
 
   describe '#switch_player' do
     it 'should change the next players turn' do

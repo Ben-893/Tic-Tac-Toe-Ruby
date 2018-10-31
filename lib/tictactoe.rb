@@ -26,12 +26,25 @@ class TicTacToe
     end
   end
 
-  def move(slot)
-    raise 'Not a valid number' unless slot =~ /^-?[0-9]+$/
+  def valid_character?(slot)
+    slot =~ /^-?[0-9]+$/
+  end
+
+  def slot_avalible?(slot)
     new_slot = slot.to_i
-    raise 'Invalid slot' if new_slot > @board.size - 1
-    raise 'Slot is in use' if @board[new_slot] != nil
-    @board[new_slot] = @current_player.piece
+    @board[new_slot] == nil && new_slot <= @board.size - 1
+  end
+
+  def valid?(slot)
+    valid_character?(slot) && slot_avalible?(slot)
+  end
+
+  def move(slot)
+    while !valid?(slot)
+      puts 'Please enter a valid slot.'
+      slot = gets.chomp
+    end
+    @board[slot.to_i] = @current_player.piece
   end
 
   def switch_player
