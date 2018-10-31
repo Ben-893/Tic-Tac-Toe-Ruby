@@ -21,20 +21,7 @@ class TicTacToe
       print_board
       input = gets.chomp
       move(input)
-      if win?(@x)
-        print_board
-        puts 'X had won!'
-        break
-      end
-      if win?(@o)
-        print_board
-        puts 'O has won!'
-        break
-      end
-      if draw?
-        puts 'Neither player wins, its a draw!'
-        break
-      end
+      break if game_over? 
       switch_player
     end
   end
@@ -61,10 +48,10 @@ class TicTacToe
     end
   end
 
-  def win?(player)
+  def win?
     WinConditions.any? do |array|
       array.all? do |slot|
-        @board[slot] == player.piece
+        @board[slot] == @current_player.piece
       end
     end
   end
@@ -72,6 +59,27 @@ class TicTacToe
   def draw?
     !@board.include? nil
   end
+
+  def game_over?
+    game_won? || game_draw?
+  end
+
+  def game_won?
+    if win?
+      print_board
+      puts "#{@current_player.piece} has won!"
+      true
+    end 
+  end
+
+  def game_draw?
+    if draw?
+      print_board
+      puts 'Neither player wins, its a draw!'
+      true
+    end
+  end
 end
+
 
 #TicTacToe.new.run
