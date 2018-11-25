@@ -2,20 +2,23 @@
 
 <a href="https://codeclimate.com/github/Ben-893/tic-tac-toe/maintainability"><img src="https://api.codeclimate.com/v1/badges/e48960bcc81e41a6f756/maintainability" /></a>
 
-## To setup
+## To Setup
 ```
 git clone https://github.com/Ben-893/tic-tac-toe.git && cd tic-tac-toe
 bundle
 ```
-Uncomment the following line to the bottom of ``tictactoe.rb``
+
+## To Run
+Uncomment the following line to the bottom of ``tictactoe.rb``:
 ```
 TicTacToe.new.run
 ```
-## To run
 ```
-ruby './libtictactoe.rb'
+ruby './lib/tictactoe.rb'
 ```
 
+## To Play
+X always goes first. Select a number between 0 and 8 to place a piece, followed by enter.
 ## Requirements
 
 - The goal is to write a program that lets two humans play Tic-Tac-Toe against each other.
