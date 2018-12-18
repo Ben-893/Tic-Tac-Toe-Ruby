@@ -61,6 +61,8 @@ class TicTacToe
     end
   end
 
+  private
+
   def win?
     WinConditions.any? do |array|
       array.all? do |slot|
@@ -95,4 +97,4 @@ class TicTacToe
 end
 
 
-# TicTacToe.new.run
+#TicTacToe.new.run

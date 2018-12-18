@@ -19,6 +19,7 @@ ruby './lib/tictactoe.rb'
 
 ## To Play
 X always goes first. Select a number between 0 and 8 to place a piece, followed by enter.
+
 ## Requirements
 
 - The goal is to write a program that lets two humans play Tic-Tac-Toe against each other.

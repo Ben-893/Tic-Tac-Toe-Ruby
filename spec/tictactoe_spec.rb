@@ -64,70 +64,70 @@ describe TicTacToe do
     end
   end
 
-  describe '#win?' do
-    it 'should check the board to see if a player has won' do
-      subject.move('0')
-      subject.move('1')
-      subject.move('2')
-      expect(subject.win?).to eq(true)
-    end
-  end
+  # describe '#win?' do
+  #   it 'should check the board to see if a player has won' do
+  #     subject.move('0')
+  #     subject.move('1')
+  #     subject.move('2')
+  #     expect(subject.win?).to eq(true)
+  #   end
+  # end
 
-  describe '#draw?' do
-    it 'should return true if there are not any slots free' do
-        subject.move('0')
-        subject.move('1')
-        subject.move('2')
-        subject.move('3')
-        subject.move('4')
-        subject.move('5')
-        subject.move('6')
-        subject.move('7')
-        subject.move('8')
-      expect(subject.draw?).to eq(true)
-    end
-    it 'should return false if there are any slots free' do
-      expect(subject.draw?).to eq(false)
-    end
-  end
+  # describe '#draw?' do
+  #   it 'should return true if there are not any slots free' do
+  #       subject.move('0')
+  #       subject.move('1')
+  #       subject.move('2')
+  #       subject.move('3')
+  #       subject.move('4')
+  #       subject.move('5')
+  #       subject.move('6')
+  #       subject.move('7')
+  #       subject.move('8')
+  #     expect(subject.draw?).to eq(true)
+  #   end
+  #   it 'should return false if there are any slots free' do
+  #     expect(subject.draw?).to eq(false)
+  #   end
+  # end
 
-  describe '#game_won?' do
-    it 'should return true if the game is won' do
-      allow(subject).to receive(:win?).and_return(true)
-      expect(subject.game_won?).to eq true
-    end
-    it 'should return nil if the game is not won' do
-      allow(subject).to receive(:win?).and_return(nil)
-      expect(subject.game_won?).to eq nil
-    end
-  end
-  describe '#game_over?' do
-    it 'should return true if the game is won' do
-      allow(subject).to receive(:game_won?).and_return(true)
-      expect(subject.game_over?).to eq true
-    end
-    it 'should return true if the game is drawn' do
-      allow(subject).to receive(:game_draw?).and_return(true)
-      expect(subject.game_over?).to eq true
-    end
-    it 'should return false if the game is won' do
-      allow(subject).to receive(:game_won?).and_return(false)
-      allow(subject).to receive(:game_draw?).and_return(false)
-      expect(subject.game_over?).to eq false
-    end
-    it 'should return false if the game is not drawn' do
-      allow(subject).to receive(:game_draw?).and_return(false)
-      expect(subject.game_over?).to eq false
-    end
-  end
-  describe '#game_draw' do 
-    it 'should return true if the game is drawn' do
-      allow(subject).to receive(:draw?).and_return(true)
-      expect(subject.game_draw?).to eq true
-   end
-    it 'should return nil if the game is not drawn' do
-      allow(subject).to receive(:draw?).and_return(nil)
-      expect(subject.game_draw?).to eq nil
-   end
-  end
+  # describe '#game_won?' do
+  #   it 'should return true if the game is won' do
+  #     allow(subject).to receive(:win?).and_return(true)
+  #     expect(subject.game_won?).to eq true
+  #   end
+  #   it 'should return nil if the game is not won' do
+  #     allow(subject).to receive(:win?).and_return(nil)
+  #     expect(subject.game_won?).to eq nil
+  #   end
+  # end
+  # describe '#game_over?' do
+  #   it 'should return true if the game is won' do
+  #     allow(subject).to receive(:game_won?).and_return(true)
+  #     expect(subject.game_over?).to eq true
+  #   end
+  #   it 'should return true if the game is drawn' do
+  #     allow(subject).to receive(:game_draw?).and_return(true)
+  #     expect(subject.game_over?).to eq true
+  #   end
+  #   it 'should return false if the game is won' do
+  #     allow(subject).to receive(:game_won?).and_return(false)
+  #     allow(subject).to receive(:game_draw?).and_return(false)
+  #     expect(subject.game_over?).to eq false
+  #   end
+  #   it 'should return false if the game is not drawn' do
+  #     allow(subject).to receive(:game_draw?).and_return(false)
+  #     expect(subject.game_over?).to eq false
+  #   end
+  # end
+  # describe '#game_draw' do 
+  #   it 'should return true if the game is drawn' do
+  #     allow(subject).to receive(:draw?).and_return(true)
+  #     expect(subject.game_draw?).to eq true
+  #  end
+  #   it 'should return nil if the game is not drawn' do
+  #     allow(subject).to receive(:draw?).and_return(nil)
+  #     expect(subject.game_draw?).to eq nil
+  #  end
+  # end
 end
