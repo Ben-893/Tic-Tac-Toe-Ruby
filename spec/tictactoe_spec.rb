@@ -101,25 +101,25 @@ describe TicTacToe do
   #     expect(subject.game_won?).to eq nil
   #   end
   # end
-  # describe '#game_over?' do
-  #   it 'should return true if the game is won' do
-  #     allow(subject).to receive(:game_won?).and_return(true)
-  #     expect(subject.game_over?).to eq true
-  #   end
-  #   it 'should return true if the game is drawn' do
-  #     allow(subject).to receive(:game_draw?).and_return(true)
-  #     expect(subject.game_over?).to eq true
-  #   end
-  #   it 'should return false if the game is won' do
-  #     allow(subject).to receive(:game_won?).and_return(false)
-  #     allow(subject).to receive(:game_draw?).and_return(false)
-  #     expect(subject.game_over?).to eq false
-  #   end
-  #   it 'should return false if the game is not drawn' do
-  #     allow(subject).to receive(:game_draw?).and_return(false)
-  #     expect(subject.game_over?).to eq false
-  #   end
-  # end
+  describe '#game_over?' do
+    it 'should return true if the game is won' do
+      allow(subject).to receive(:game_won?).and_return(true)
+      expect(subject.game_over?).to eq true
+    end
+    it 'should return true if the game is drawn' do
+      allow(subject).to receive(:game_draw?).and_return(true)
+      expect(subject.game_over?).to eq true
+    end
+    it 'should return false if the game is won' do
+      allow(subject).to receive(:game_won?).and_return(false)
+      allow(subject).to receive(:game_draw?).and_return(false)
+      expect(subject.game_over?).to eq false
+    end
+    it 'should return false if the game is not drawn' do
+      allow(subject).to receive(:game_draw?).and_return(false)
+      expect(subject.game_over?).to eq false
+    end
+  end
   # describe '#game_draw' do 
   #   it 'should return true if the game is drawn' do
   #     allow(subject).to receive(:draw?).and_return(true)

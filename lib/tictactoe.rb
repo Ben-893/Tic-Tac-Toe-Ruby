@@ -61,6 +61,10 @@ class TicTacToe
     end
   end
 
+  def game_over?
+    game_won? || game_draw?
+  end
+
   private
 
   def win?
@@ -73,10 +77,6 @@ class TicTacToe
 
   def draw?
     !@board.include? nil
-  end
-
-  def game_over?
-    game_won? || game_draw?
   end
 
   def game_won?
