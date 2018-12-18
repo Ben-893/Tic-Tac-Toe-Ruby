@@ -82,7 +82,7 @@ class TicTacToe
       print_board
       puts "#{@current_player.piece} has won!"
       true
-    end 
+    end
   end
 
   def game_draw?
@@ -95,4 +95,4 @@ class TicTacToe
 end
 
 
-TicTacToe.new.run
+# TicTacToe.new.run
