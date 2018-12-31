@@ -96,5 +96,4 @@ class TicTacToe
   end
 end
 
-
-#TicTacToe.new.run
+# TicTacToe.new.run
