@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require './lib/tictactoe.rb'
+
+
+TicTacToe.new.run

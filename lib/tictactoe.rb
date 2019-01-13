@@ -61,9 +61,6 @@ class TicTacToe
     end
   end
 
-  def game_over?
-    game_won? || game_draw?
-  end
 
   private
 
@@ -94,6 +91,8 @@ class TicTacToe
       true
     end
   end
-end
 
-# TicTacToe.new.run
+  def game_over?
+    game_won? || game_draw?
+  end
+end

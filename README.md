@@ -9,12 +9,17 @@ bundle
 ```
 
 ## To Run
-Uncomment the following line to the bottom of ``tictactoe.rb``:
+Add the run file to your bin folder like so:
 ```
-TicTacToe.new.run
+ln -s $PWD/run /usr/local/bin/
 ```
+Now just type 'run' in the terminal.
 ```
-ruby './lib/tictactoe.rb'
+run
+```
+To run without adding it to the bin folder, run this command instead:
+```
+'./run'
 ```
 
 ## To Play
