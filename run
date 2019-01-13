@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
 
 require './lib/tictactoe.rb'
+require './lib/board.rb'
+require './lib/player.rb'
 
-
-TicTacToe.new.run
+board = Board.new
+player_x = Player.new('x')
+player_o = Player.new('o')
+TicTacToe.new(board, player_x, player_o).run

@@ -6,11 +6,10 @@ class TicTacToe
 
   attr_reader :board, :current_player
 
-  def initialize
-    board = Board.new
+  def initialize(board, player_x, player_o)
     @board = board.grid
-    @x = Player.new('x')
-    @o = Player.new('o')
+    @x = player_x
+    @o = player_o
     @current_player = @x
   end
 
