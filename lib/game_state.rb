@@ -14,22 +14,22 @@ module GameState
   end
 
   def game_won?
-    if win?
-      @board.print
-      puts "#{@current_player.piece} has won!"
-      true
-    end
+    print_message("#{@current_player.piece} has won!") if win?
   end
 
   def game_draw?
-    if draw?
-      @board.print
-      puts 'Neither player wins, its a draw!'
-      true
-    end
+    print_message('Neither player wins, its a draw!') if draw?
   end
 
   def game_over?
     game_won? || game_draw?
+  end
+
+  private
+
+  def print_message(text)
+    puts text
+    @board.print
+    true
   end
 end

@@ -16,7 +16,7 @@ attr_reader :grid
 
   def slot_available?(slot)
     new_slot = slot.to_i
-    @grid[new_slot] == nil && new_slot <= @grid.size - 1
+    @grid[new_slot].nil? && new_slot <= @grid.size - 1
   end
 
   def print

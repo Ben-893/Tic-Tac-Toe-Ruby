@@ -18,7 +18,7 @@ class TicTacToe
 
   def run
     puts 'TicTacToe'
-    puts ''
+    puts 'X goes first'
     while true 
       @board.print
       input = gets.chomp
@@ -37,10 +37,7 @@ class TicTacToe
   end
 
   def switch_player
-    if @current_player == @x
-      @current_player = @o
-    else
-      @current_player = @x
-    end
+    @current_player == @x ? @current_player = @o : @current_player = @x
+    puts "Now it is #{current_player.piece}'s turn."
   end
 end
