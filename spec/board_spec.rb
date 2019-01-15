@@ -16,6 +16,9 @@ describe Board do
     it 'should return false if the player tries to enter a character that is not a number' do
       expect(board.valid_character?('$')).to eq nil
     end
+    it 'should return true if the player tries to enter a character that is a number' do
+      expect(board.valid_character?('0')).to eq 0
+    end
   end
 
   describe '#slot_available?' do
@@ -23,8 +26,14 @@ describe Board do
       tictactoe.move('0')
       expect(board.slot_available?('0')).to eq false
     end
+    it 'should return true if a player tries to use a slot thats not in use' do
+      expect(board.slot_available?('0')).to eq true
+    end
     it 'should return false if a player tries to select a slot greater than 9' do
       expect(board.slot_available?('9')).to eq false
+    end
+    it 'should return true if a player tries to select a slot lower than 9' do
+      expect(board.slot_available?('8')).to eq true
     end
   end
 
