@@ -20,6 +20,17 @@ describe TicTacToe do
     end
   end
 
+  describe '#run' do
+    it 'should test the standard output' do
+    allow(tictactoe).to receive(:gets).and_return("0")
+      expect(STDOUT).to receive(:puts).with("TicTacToe")
+      expect(STDOUT).to receive(:puts).with("X goes first")
+      expect(STDOUT).to receive(:puts).with("|nil||nil||nil|").exactly(3).times
+      allow(tictactoe).to receive(:game_over?).and_return(true)
+      tictactoe.run
+    end
+  end
+
   describe '#switch_player' do
     it 'should change the next players turn' do
       tictactoe.switch_player

@@ -67,7 +67,7 @@ describe GameState do
       allow(tictactoe).to receive(:game_draw?).and_return(true)
       expect(tictactoe.game_over?).to eq true
     end
-    it 'should return false if the game is won' do
+    it 'should return false if the game is not over' do
       allow(tictactoe).to receive(:game_won?).and_return(false)
       allow(tictactoe).to receive(:game_draw?).and_return(false)
       expect(tictactoe.game_over?).to eq false
