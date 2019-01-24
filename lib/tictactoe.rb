@@ -2,10 +2,9 @@ require_relative 'board'
 require_relative 'player'
 require_relative 'game_state'
 require 'pry'
+
 class TicTacToe
   include GameState
-
-
   attr_reader :board, :current_player, :grid
 
   def initialize(board, player_x, player_o)

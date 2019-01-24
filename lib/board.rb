@@ -1,6 +1,5 @@
 class Board
-
-attr_reader :grid
+  attr_reader :grid
 
   def initialize
     @grid = [nil, nil, nil, nil, nil, nil, nil, nil, nil]
