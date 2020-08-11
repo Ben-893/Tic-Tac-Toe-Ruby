@@ -4,7 +4,7 @@
 
 ## To Setup
 ```
-git clone https://github.com/Ben-893/tic-tac-toe.git && cd tic-tac-toe
+git clone https://github.com/Ben-893/Tic-Tac-Toe-Ruby && cd Tic-Tac-Toe-Ruby
 bundle
 ```
 
